@@ -10,7 +10,29 @@ function setup(){
 
 function draw(){
   background(160, 192, 255);
+  
+
+if(keyIsDown(LEFT_ARROW)){
   count = (count + 1) % cycle;
+
   // BLANK[1]
+  let size = count;
+  if(count > 50){
+    ellipse(width / 2, height / 2, size - ((size - 50)* 2))
+  }
+ else{
   ellipse(width / 2, height / 2, size);
 }
+}
+else{
+  count = (count + 0.25) % cycle;
+
+  // BLANK[1]
+  let size = count;
+  if(count > 50){
+    ellipse(width / 2, height / 2, size - ((size - 50)* 2))
+  }
+ else{
+  ellipse(width / 2, height / 2, size);
+}
+}}
